@@ -7,7 +7,7 @@ services:
       dockerfile: ./docker/app/Dockerfile
     volumes:
       - ./:/myapp
-      - ./logs/fpm-php/:/var/log/
+      - ./logs/php/:/var/log/
     working_dir: "/myapp"
   php:
     depends_on:
@@ -56,8 +56,6 @@ services:
     build:
       context: ./
       dockerfile: docker/phpmyadmin/Dockerfile
-    ports:
-      - 8080:80
     env_file:
       - docker/phpmyadmin/phpmyadmin.env
 volumes:
