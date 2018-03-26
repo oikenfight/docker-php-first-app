@@ -1,0 +1,7 @@
+/node_modules
+/public/hot
+/public/storage
+/vendor
+/.idea
+.env
+.DS_Store
