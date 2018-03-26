@@ -1,0 +1,13 @@
+[26-Mar-2018 18:34:31 Asia/Tokyo] PHP Warning:  error_log() expects parameter 1 to be string, array given in /myapp/public/test.php on line 5
+[26-Mar-2018 18:34:33 Asia/Tokyo] PHP Warning:  error_log() expects parameter 1 to be string, array given in /myapp/public/test.php on line 5
+[26-Mar-2018 18:34:34 Asia/Tokyo] PHP Warning:  error_log() expects parameter 1 to be string, array given in /myapp/public/test.php on line 5
+[26-Mar-2018 18:35:21 Asia/Tokyo] PHP Warning:  A non-numeric value encountered in /myapp/public/test.php on line 5
+[26-Mar-2018 18:35:21 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Unsupported operand types in /myapp/public/test.php:5
+Stack trace:
+#0 {main}
+  thrown in /myapp/public/test.php on line 5
+[26-Mar-2018 18:35:48 Asia/Tokyo] PHP Warning:  A non-numeric value encountered in /myapp/public/test.php on line 5
+[26-Mar-2018 18:35:48 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Unsupported operand types in /myapp/public/test.php:5
+Stack trace:
+#0 {main}
+  thrown in /myapp/public/test.php on line 5
