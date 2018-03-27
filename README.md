@@ -67,22 +67,35 @@
         - php の画面が表示されれば完了
 
     * Windows の人
-        - 以下のコマンドで Docker の IP を調べる
+        - 以下のコマンドで Docker の IP を調べる （VM 名は特に何もしてなければ default）
         ```$xslt
         $ docker-machine ip (使用している VM 名)
         ```
         - https://(調べたIPアドレス) にアクセス
         - php の画面が表示されれば完了
+        
+※ 注意： ブラウザでアクセスすると最初に「この接続ではプライバシーが保護されません」と警告がでるけど無視（ssl認証を自己認証にしているため発生）。
+「詳細情報」をクリックして「アクセスする（安全ではありません）」をクリック。
 
 
 ## 使い方
 
-* public/ に .php ファイル作ればブラウザから見れる
+* public/ に .php ファイルを作ればブラウザから見れる
     - 例：
          + public/test/test.php を作成
-         + https://(各自 IP)/test/test.php にアクセス
+         + https://(localhost or 各自 IP)/test/test.php にアクセス
          + test.php が表示される
-         
-
+    - public/ の下に自分のアプリケーションを置くためのディレクトリを作成して作業開始！
+* データベースの使い方
+    - phpmyadmin を活用する
+    - https://(localhost or 各自 IP)/phpmyadmin/ にアクセス
+    - 左メニューに「app」というデータベースを選択
+    - 「app」データベース内のテーブルを操作する
+* log の活用
+    - 以下のコマンドで php のエラーログを見たりすると便利
+    ```$xslt
+    $ tail -f logs/php/fpm-php.www.log
+    ```
+    - 何かエラーがある度に自動更新してくれる
         
 ## サンプルアプリケーションを動かす
