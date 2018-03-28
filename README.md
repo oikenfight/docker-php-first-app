@@ -27,8 +27,7 @@
     ```
     
 #### Windows の人
-1. Docker をダウンロードする
-    * windows の人は [Docker toolbox](https://docs.docker.com/toolbox/overview/) からダウンロード
+1. [Docker toolbox](https://docs.docker.com/toolbox/overview/) をダウンロードする
 2. Docker をインストールする
     * 参考: https://docs.docker.com/toolbox/toolbox_install_windows/
     * 参考: https://qiita.com/maemori/items/52b1639fba4b1e68fccd
@@ -78,19 +77,19 @@
 「詳細情報」をクリックして「アクセスする（安全ではありません）」をクリック。
 
 
-## 使い方
+## 基本的な使い方
 
-* public/ に .php ファイルを作ればブラウザから見れる
+* `public/` に .php ファイルを作ればブラウザから見れる
     - 例：
-         + public/test/test.php を作成
+         + `public/test/test.php` を作成
          + https://(localhost or 各自 IP)/test/test.php にアクセス
-         + test.php が表示される
+         + `test.php` の内容が表示される
     - public/ の下に自分のアプリケーションを置くためのディレクトリを作成して作業開始！
 * データベースの使い方
-    - phpmyadmin を活用する
+    - `phpmyadmin` を活用する
     - https://(localhost or 各自 IP)/phpmyadmin/ にアクセス
-    - 左メニューに「app」というデータベースを選択
-    - 「app」データベース内のテーブルを操作する
+    - 左メニューに `app` というデータベースを選択
+    - `app` データベース内のテーブルを操作する
 * log の活用
     - 以下のコマンドで php のエラーログを見たりすると便利
     ```$xslt
@@ -98,4 +97,36 @@
     ```
     - 何かエラーがある度に自動更新してくれる
         
-## サンプルアプリケーションを動かす
+## サンプルアプリケーション
+
+### 動かし方
+
+1. データベースを作成する
+    1. `public/blog-sample/db_scheme.sql` を開いて内容を全てコピーしておく
+    2. https://(localhost or 各自IP)/phpmyadmin/ にアクセスして phpmyadmin を開く
+    3. 左にあるメニューから `app` を選択
+    4. 画面上の方のタブメニューから「SQL」を選択
+    5. テキストエリアにコピーしておいて sql を貼り付ける
+    6. 実行ボタンをクリック
+    7. 画面上の方のタブメニューから「構造」を選択し、`articles`, `users` テーブルがあることを確認
+2. アプリケーションを試す
+    1. https://(localhost or 各自IP)/blog-sample/ にアクセス
+    2. 新規登録してスタート
+    
+※ Twitter ログインは今のところ対応してない
+
+### 要件
+- ユーザー名とパスワードを用いたユーザー登録と認証
+- Twitterアカウントを用いた登録と認証
+- 新規記事投稿
+- 投稿記事表示
+
+### 構成
+- 登録: `user-register.php  `
+- ログイン: `login.php`   
+- Twitterで登録&ログイン `twitter-login.php`
+- 一覧: `index.php`
+- 詳細: `article.php`
+- 新規投稿: `new-article.php`
+- DB情報は`config.php`にて定義
+- 複数箇所で呼ばれる処理は関数に纏め、`functions.php`に定義

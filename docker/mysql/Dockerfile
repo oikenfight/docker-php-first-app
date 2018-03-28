@@ -1,5 +1,6 @@
 FROM mysql:5.7
 
-ADD "docker/mysql/docker-entrypoint-initdb.d/initial.sql" "/docker-entrypoint-initdb.d"
+# 初期データを流し込めそうな気がしたけど、上手く行ってない
+# ADD "docker/mysql/docker-entrypoint-initdb.d/initial.sql" "/docker-entrypoint-initdb.d"
 
 RUN apt-get update -y
