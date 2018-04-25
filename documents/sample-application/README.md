@@ -25,10 +25,12 @@
     4. 画面上の方のタブメニューから「SQL」を選択
     5. テキストエリアにコピーしておいた内容を貼り付ける
     6. 実行ボタンをクリック
-    ![データベース作成手順](./images/phpmyadmin-create-table.png)
     7. 画面上の方のタブメニューから「構造」を選択し、articles, users テーブルがあることを確認
+    ![データベース作成手順](./images/phpmyadmin-create-table.png)
+
 2. アプリケーションを試す
     1. `https://(localhost or 各自IP)/blog-sample/` にアクセス
     2. 新規登録してスタート
+    
     
 ※ Twitter ログインは今のところ対応してない
