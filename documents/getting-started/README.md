@@ -17,7 +17,7 @@
 
 #### 確認
 * 以下のコマンドが通れば OK。（Mac は Teminal、 Windows は Docker Quick Start Terminal を使用）
-    ```bash
+    ```bash
     $ docker --version
     $ docker-compose --verison
     $ docker-machine --version
