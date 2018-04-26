@@ -26,7 +26,7 @@
     ![各コマンドの出力例](./images/confirm-docker-installed.png)
 
     
-### 必要なファイルを準備
+## 必要なファイルを準備
 
 1. 以下のリンクから環境構築に使うファイルをダウンロードする
     * https://github.com/oikenfight/docker-php-first-app
@@ -36,7 +36,7 @@
 3. 展開したファイルを適当な作業スペースに移動
 
 
-### 環境構築
+## 環境構築
 
 1. CLI でダウンロードしたファイルがある場所に移動
     ```bash
@@ -57,7 +57,7 @@
 ※ `docker-compose build` コマンドは最初の一回だけ実行（次回起動するときは必要ない）
 
     
-### 起動・停止
+## 起動・停止
 
 #### 起動
 1. 起動（何やら処理が開始されるはず）
@@ -80,7 +80,7 @@
 ![docker-compose ps コマンド実行例（起動していない状態）](./images/sample-docker-compose-down.png)
 
 
-### 動作確認
+## 動作確認
 
 #### Mac
 
