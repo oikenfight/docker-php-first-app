@@ -16,7 +16,7 @@
 ※ 手順: [Docker toolbox 導入手順（Windows 向け）](../docker-toolbox/README.md)
 
 #### 確認
-* 以下のコマンドが通れば OK。 （Mac は Teminal、 Windows は Docker Quick Start Terminal を使用）
+* 以下のコマンドが通れば OK。（Mac は Teminal、 Windows は Docker Quick Start Terminal を使用）
     ```bash
     $ docker --version
     $ docker-compose --verison
