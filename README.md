@@ -12,3 +12,4 @@
 - [Getting Started](./documents/getting-started/README.md)
 - [Basic Usage](./documents/basic-usage/README.md)
 - [Sample Application](./documents/sample-application/README.md)
+- [Additional Usage](./documents/additional-usage/README.md)
