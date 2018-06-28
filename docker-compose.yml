@@ -43,6 +43,7 @@ services:
       - docker/mysql/mysql.env
     volumes:
       - db-data:/var/lib/mysql
+      - ./logs/mysql/:/var/log/mysql
   composer:
     depends_on:
       - app
