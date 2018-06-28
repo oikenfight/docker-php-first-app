@@ -8,6 +8,7 @@ function connectDB()
 
     try {
         $db = new PDO($dsn, $config['db']['user'], $config['db']['password']);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     } catch (PDOException $e) {
         die('Connecting database failed:' . $e->getMessage());
     }
